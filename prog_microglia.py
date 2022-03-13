@@ -11,7 +11,10 @@ del microglia_df['Índice de Analise']
 microglia_df.columns = ['Group','Animal','Segments','End-points','Lengh','N Cells','Density','Span Ratio','Circularity','Area']
 microglia_df['Area'] = microglia_df['Area'].astype(float)
 microglia_df.head()
-
+# mean for each parameter by group 
+microglia_df.groupby('Group').mean()
+# standart deviation for each parameter by group 
+microglia_df.groupby('Group').std()
 # separating skeleton and fraclac parameters 
 skeleton_df = microglia_df[['Group','Segments','End-points','Lengh']]
 fraclac_df = microglia_df[['Group','Density','Span Ratio','Circularity','Area']]
