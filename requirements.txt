@@ -1,0 +1,6 @@
+#This txt display the packages required for prog_microglia project 
+pandas 
+numpy
+seaborn
+matplotlib
+sklearn 
